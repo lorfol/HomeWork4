@@ -10,6 +10,103 @@ namespace homeWork3
 	{
 		static void Main(string[] args)
 		{
+			// 4.5
+			float maxPrice = 1000;
+			float minPrice = 900;
+			Console.Write("Input the price: ");
+			float nowPrice = float.Parse(Console.ReadLine());
+			//if (nowPrice > maxPrice || nowPrice < minPrice)
+			//{
+			//	if (nowPrice > maxPrice) Console.WriteLine($"Price is bigger than {maxPrice}!");
+			//	if (nowPrice < minPrice) Console.WriteLine($"Price is less than {minPrice}!");
+			//}
+			//else Console.WriteLine("Price is still OK.");
+			if (nowPrice > maxPrice) Console.WriteLine($"Price is bigger than {maxPrice}!");
+			if (nowPrice < minPrice) Console.WriteLine($"Price is less than {minPrice}!");
+			if (nowPrice < maxPrice && nowPrice > minPrice) Console.WriteLine("Price is still OK.");
+			Console.ReadKey();
+
+			// 4.6
+			float a, b;
+			float res;
+			char act;
+			Console.Write("Input 1st number: ");
+			a = float.Parse(Console.ReadLine());
+			Console.Write("Input action (+, - , *, /, %): ");
+			act = char.Parse(Console.ReadLine());
+
+			while (!(act == '+' || act == '-' || act == '*' || act == '/' || act == '%'))
+			{
+				Console.Write("Wrong action! Input another action (+, - , *, /, %): ");
+				act = char.Parse(Console.ReadLine());
+			}
+
+			Console.Write("Input 2nd number: ");
+			b = float.Parse(Console.ReadLine());
+			Console.WriteLine();
+
+			switch (act)
+			{
+				case '+':
+					res = a + b;
+					Console.WriteLine($"{a} + {b} = {res}");
+					break;
+
+				case '-':
+					res = a - b;
+					Console.WriteLine($"{a} - {b} = {res}");
+					break;
+
+				case '*':
+					res = a * b;
+					Console.WriteLine($"{a} * {b} = {res}");
+					break;
+
+				case '/':
+					res = a / b;
+					Console.WriteLine($"{a} / {b} = {res}");
+					break;
+
+				case '%':
+					res = a % b;
+					Console.WriteLine($"{a} % {b} = {res}");
+					break;
+
+
+			}
+			Console.ReadKey();
+
+			// 4.7
+			string fCar = "First car";
+			string sCar = "Second car";
+			Console.Write("Input name of 1st car: ");
+			string nameFirstCar = Console.ReadLine();
+			Console.Write("Input max speed of 1st car: ");
+			float maxSpeedFirstCar = float.Parse(Console.ReadLine());
+			Console.Write("Input petrol consumtion of 1st car: ");
+			float petrolConsumptionFirstCar = float.Parse(Console.ReadLine());
+			Console.Write("Input name of 2nd car: ");
+			string nameSecondCar = Console.ReadLine();
+			Console.Write("Input max speed of 2nd car: ");
+			float maxSpeedSecondCar = float.Parse(Console.ReadLine());
+			Console.Write("Input petrol consumption of 2nd car: ");
+			float petrolConsumptionSecondCar = float.Parse(Console.ReadLine());
+			char speed, petrol;
+
+			if (maxSpeedFirstCar > maxSpeedSecondCar) speed = '>';
+			if (maxSpeedFirstCar < maxSpeedSecondCar) speed = '<';
+			else speed = '=';
+
+			if (petrolConsumptionFirstCar > petrolConsumptionSecondCar) petrol = '>';
+			if (petrolConsumptionFirstCar < petrolConsumptionSecondCar) petrol = '<';
+			else petrol = '=';
+
+
+			Console.WriteLine($"\n{fCar,40}{sCar,30}");
+			Console.WriteLine($"Model: {nameFirstCar,33}{nameSecondCar,30}");
+			Console.WriteLine($"Max Speed: {maxSpeedFirstCar,29}{speed,15}{maxSpeedSecondCar,15}");
+			Console.WriteLine($"Petrol Consumption: {petrolConsumptionFirstCar,20}{petrol,15}{petrolConsumptionSecondCar,15}");
+			Console.ReadKey();
 		}
 	}
 }
