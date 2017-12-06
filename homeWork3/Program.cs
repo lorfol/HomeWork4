@@ -23,7 +23,7 @@ namespace homeWork3
 			//else Console.WriteLine("Price is still OK.");
 			if (nowPrice > maxPrice) Console.WriteLine($"Price is bigger than {maxPrice}!");
 			if (nowPrice < minPrice) Console.WriteLine($"Price is less than {minPrice}!");
-			if (nowPrice < maxPrice && nowPrice > minPrice) Console.WriteLine("Price is still OK.");
+			if (nowPrice <= maxPrice && nowPrice >= minPrice) Console.WriteLine("Price is still OK.");
 			Console.ReadKey();
 
 			// 4.6
