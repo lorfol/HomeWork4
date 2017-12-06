@@ -102,10 +102,43 @@ namespace homeWork3
 			else petrol = '=';
 
 
-			Console.WriteLine($"\n{fCar,40}{sCar,30}");
-			Console.WriteLine($"Model: {nameFirstCar,33}{nameSecondCar,30}");
-			Console.WriteLine($"Max Speed: {maxSpeedFirstCar,29}{speed,15}{maxSpeedSecondCar,15}");
-			Console.WriteLine($"Petrol Consumption: {petrolConsumptionFirstCar,20}{petrol,15}{petrolConsumptionSecondCar,15}");
+			//Console.WriteLine($"\n{fCar,40}{sCar,30}");
+			//Console.WriteLine($"Model: {nameFirstCar,33}{nameSecondCar,30}");
+			//Console.WriteLine($"Max Speed: {maxSpeedFirstCar,29}{speed,15}{maxSpeedSecondCar,15}");
+			//Console.WriteLine($"Petrol Consumption: {petrolConsumptionFirstCar,20}{petrol,15}{petrolConsumptionSecondCar,15}");
+
+			Console.SetCursorPosition(25, 10);
+			Console.WriteLine($"{fCar}");
+			Console.SetCursorPosition(60, 10);
+			Console.WriteLine($"{sCar}");
+
+			Console.SetCursorPosition(0, 11);
+			Console.WriteLine("Model:");
+			Console.SetCursorPosition(0, 12);
+			Console.WriteLine("Max Speed:");
+			Console.SetCursorPosition(0,13);
+			Console.WriteLine("Petrol Consumption:");
+
+			Console.SetCursorPosition(25, 11);
+			Console.WriteLine($"{nameFirstCar}");
+			Console.SetCursorPosition(25, 12);
+			Console.WriteLine($"{maxSpeedFirstCar}");
+			Console.SetCursorPosition(25, 13);
+			Console.WriteLine($"{petrolConsumptionFirstCar}");
+
+			Console.SetCursorPosition(43, 12);
+			Console.WriteLine($"{speed}");
+			Console.SetCursorPosition(43, 13);
+			Console.WriteLine($"{petrol}");
+
+			Console.SetCursorPosition(60, 11);
+			Console.WriteLine($"{nameSecondCar}");
+			Console.SetCursorPosition(60, 12);
+			Console.WriteLine($"{maxSpeedSecondCar}");
+			Console.SetCursorPosition(60, 13);
+			Console.WriteLine($"{petrolConsumptionSecondCar}");
+
+
 			Console.ReadKey();
 		}
 	}
